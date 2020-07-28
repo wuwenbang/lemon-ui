@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/wuwenbang/lemon-ui/issues"
   },
-  "homepage": "https://github.com/wuwenbang/lemon-ui#readme"
+  "homepage": "https://github.com/wuwenbang/lemon-ui#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
 }
