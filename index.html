@@ -37,6 +37,12 @@
         <lm-button :loading="load" @click="load = !load">按钮</lm-button>
         <lm-button :loading="true">加载</lm-button>
         <lm-button icon="setting">设置</lm-button>
+        <lm-button-group>
+            <lm-button icon="left">后退</lm-button>
+            <lm-button icon="setting">设置</lm-button>
+            <lm-button icon="right" icon-position="right">前进</lm-button>
+        </lm-button-group>
+
     </div>
     <script src="src/app.js"></script>
 
