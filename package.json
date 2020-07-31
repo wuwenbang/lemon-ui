@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/wuwenbang/lemon-ui#readme",
   "dependencies": {
+    "chai": "^4.2.0",
     "global": "^4.4.0",
     "parcel": "^1.12.4",
     "vue": "^2.6.11",
