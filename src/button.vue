@@ -1,8 +1,8 @@
 <template>
 
-  <button class="lm-button" :class="{[`icon-${iconPosition}`]:true}">
-    <lm-icon v-if="icon" :name="icon"></lm-icon>
-    <lm-icon class="loading" name="loading"></lm-icon>
+  <button class="lm-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
+    <lm-icon v-if="icon && !loading" :name="icon"></lm-icon>
+    <lm-icon v-if="loading" class="loading icon" name="loading"></lm-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -13,6 +13,10 @@
 export default {
   props: {
     icon: {},
+    loading: {
+      type: Boolean,
+      default: false,
+    },
     iconPosition: {
       type: String,
       default: "left",

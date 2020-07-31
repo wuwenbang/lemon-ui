@@ -5,5 +5,8 @@ import Icon from './icon'
 Vue.component('lm-button', Button)
 Vue.component('lm-icon', Icon)
 new Vue({
-    el: '#app'
+    el: '#app',
+    data: {
+        load: false
+    }
 })
