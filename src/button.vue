@@ -2,6 +2,7 @@
 
   <button class="lm-button" :class="{[`icon-${iconPosition}`]:true}">
     <lm-icon v-if="icon" :name="icon"></lm-icon>
+    <lm-icon class="loading" name="loading"></lm-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -25,9 +26,18 @@ export default {
 </script>
 
 <style lang="scss">
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .lm-button {
   height: var(--button-height);
   font-size: var(--font-size);
+  line-height: var(--font-size);
   padding: 0 1em;
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
@@ -63,6 +73,9 @@ export default {
       margin-left: 4px;
       margin-right: 0;
     }
+  }
+  .loading {
+    animation: spin 2s infinite linear;
   }
 }
 </style>
