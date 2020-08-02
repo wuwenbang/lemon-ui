@@ -1,6 +1,6 @@
 <template>
 
-  <button class="lm-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
+  <button class="lm-button test" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
     <lm-icon v-if="icon && !loading" :name="icon"></lm-icon>
     <lm-icon v-if="loading" class="loading icon" name="loading"></lm-icon>
     <div class="content">
