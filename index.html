@@ -43,6 +43,10 @@
         <div class="box">
             <lm-input value="error" error="账号不能少于七个字符"></lm-input>
         </div>
+        <div class="box">
+            <lm-input v-model="message"></lm-input>
+            {{message}}
+        </div>
 
         <div class="box">
             <lm-button :loading="load" @click="load = !load">按钮</lm-button>

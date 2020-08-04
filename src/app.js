@@ -10,7 +10,13 @@ Vue.component('lm-input', Input)
 new Vue({
     el: '#app',
     data: {
-        load: false
+        load: false,
+        message: 'hello'
+    },
+    methods: {
+        inputChange(e) {
+            console.log(e.target.value);
+        }
     }
 })
 
