@@ -7,6 +7,7 @@
 <script>
 import "./svg.js";
 export default {
+  name: "LemonIcon",
   props: ["name"],
 };
 </script>

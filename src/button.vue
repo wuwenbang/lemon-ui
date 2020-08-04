@@ -14,6 +14,7 @@ import Vue from "vue";
 import Icon from "./icon";
 Vue.component("lm-icon", Icon);
 export default {
+  name: "LemonButton",
   props: {
     icon: {},
     loading: {
@@ -32,7 +33,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scope>
 @keyframes spin {
   0% {
     transform: rotate(0deg);
