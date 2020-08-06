@@ -15,7 +15,7 @@ new Vue({
     el: '#app',
     data: {
         load: false,
-        message: 'hello'
+        message: 'hello',
     },
     methods: {
         inputChange(e) {
