@@ -37,6 +37,7 @@ describe('Row', () => {
             vm.$destroy()
         }, 0);
     })
+
     it('接收 position 属性', () => {
         const div = document.createElement('div')
         document.body.appendChild(div)
@@ -50,8 +51,5 @@ describe('Row', () => {
         expect(getComputedStyle(element).justifyContent).to.eq('flex-start')
         div.remove()
         vm.$destroy()
-
     })
-
-
 })
