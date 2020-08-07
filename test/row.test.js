@@ -25,7 +25,6 @@ describe('Row', () => {
         const vm = new Vue({
             el: div
         })
-        console.log(vm.$el.outerHTML)
         setTimeout(() => {
             const row = vm.$el.querySelector('.row')
             expect(getComputedStyle(row).marginLeft).to.eq('-10px')
@@ -34,7 +33,24 @@ describe('Row', () => {
             expect(getComputedStyle(cols[0]).paddingRight).to.eq('10px')
             expect(getComputedStyle(cols[1]).paddingLeft).to.eq('10px')
             done()
+            vm.$el.remove()
+            vm.$destroy()
         }, 0);
+    })
+    it('接收 position 属性', () => {
+        const div = document.createElement('div')
+        document.body.appendChild(div)
+        const Constructor = Vue.extend(Row)
+        const vm = new Constructor({
+            propsData: {
+                position: 'left'
+            }
+        }).$mount(div)
+        const element = vm.$el
+        expect(getComputedStyle(element).justifyContent).to.eq('flex-start')
+        div.remove()
+        vm.$destroy()
+
     })
 
 
