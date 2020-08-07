@@ -1,17 +1,18 @@
 <template>
-  <div class="content">
+  <div class="header">
     <slot></slot>
+
   </div>
 </template>
 
 <script>
 export default {
-  name: "LemonContent",
+  name: "LemonHeader",
 };
 </script>
 
 <style lang="scss" scoped>
-.content {
-  flex-grow: 1;
+.header {
+  width: 100%;
 }
 </style>

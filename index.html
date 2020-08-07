@@ -22,57 +22,44 @@
             --border-color: #999;
             --border-color-hover: #666;
         }
-
-        .box {
-            margin: 20px;
-        }
-
-        #app {
-            margin: 20px;
-        }
-
-        .item {
-            height: 100px;
-            background: green;
+    </style>
+    <style>
+        .demo {
             border: 1px solid gray;
+            min-height: 100px;
+        }
+
+        .header {
+            background: #aaa;
+        }
+
+        .content {
+            background: #ddd;
+        }
+
+        .footer {
+            background: #bbb;
+        }
+
+        .slider {
+            background: #eee;
+            width: 200px;
         }
     </style>
 </head>
 
 <body>
     <div id="app">
-        <lm-row gutter="20">
-            <lm-col class="item" span="8">1</lm-col>
-            <lm-col class="item" span="16">2</lm-col>
-        </lm-row>
-        <lm-row gutter="20">
-            <lm-col class="item" span="24" :ipad="{span:12}">1</lm-col>
-            <lm-col class="item" span="24" :ipad="{span:12}">2</lm-col>
-        </lm-row>
-        <!-- <div class="box">
-            <lm-input value="hello"></lm-input>
-            <lm-input value="disabled" disabled></lm-input>
-            <lm-input value="readonly" readonly></lm-input>
-        </div>
-        <div class="box">
-            <lm-input value="error" error="账号不能少于七个字符"></lm-input>
-        </div>
-        <div class="box">
-            <lm-input v-model="message"></lm-input>
-            {{message}}
-        </div>
-
-        <div class="box">
-            <lm-button :loading="load" @click="load = !load">按钮</lm-button>
-            <lm-button :loading="true">加载</lm-button>
-            <lm-button icon="settings">设置</lm-button>
-            <lm-button-group>
-                <lm-button icon="left">后退</lm-button>
-                <lm-button icon="settings">设置</lm-button>
-                <lm-button icon="right" icon-position="right">前进</lm-button>
-            </lm-button-group>
-        </div> -->
+        <lm-layout style="height: 100vh;">
+            <lm-sider class="demo slider">Sider</lm-sider>
+            <lm-layout>
+                <lm-header class="demo header">Header</lm-header>
+                <lm-content class="demo content">Content</lm-content>
+                <lm-footer class="demo footer">Footer</lm-footer>
+            </lm-layout>
+        </lm-layout>
     </div>
+
     <script src="src/app.js"></script>
 
 </body>
