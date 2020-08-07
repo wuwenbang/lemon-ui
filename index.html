@@ -30,20 +30,26 @@
         #app {
             margin: 20px;
         }
+
+        .item {
+            height: 100px;
+            background: green;
+            border: 1px solid gray;
+        }
     </style>
 </head>
 
 <body>
-    <div id="app" style="border: 1px solid gray;">
+    <div id="app">
         <lm-row gutter="20">
-            <lm-col span="8">1</lm-col>
-            <lm-col span="16">2</lm-col>
+            <lm-col class="item" span="8">1</lm-col>
+            <lm-col class="item" span="16">2</lm-col>
         </lm-row>
         <lm-row gutter="20">
-            <lm-col span="8" :pc="{span:12}">1</lm-col>
-            <lm-col span="16" :pc="{span:12}">2</lm-col>
+            <lm-col class="item" span="24" :ipad="{span:12}">1</lm-col>
+            <lm-col class="item" span="24" :ipad="{span:12}">2</lm-col>
         </lm-row>
-        <div class="box">
+        <!-- <div class="box">
             <lm-input value="hello"></lm-input>
             <lm-input value="disabled" disabled></lm-input>
             <lm-input value="readonly" readonly></lm-input>
@@ -65,7 +71,7 @@
                 <lm-button icon="settings">设置</lm-button>
                 <lm-button icon="right" icon-position="right">前进</lm-button>
             </lm-button-group>
-        </div>
+        </div> -->
     </div>
     <script src="src/app.js"></script>
 
