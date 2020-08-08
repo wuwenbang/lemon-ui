@@ -10,6 +10,9 @@ import Header from './header'
 import Content from './content'
 import Footer from './footer'
 import Sider from './sider'
+import Toast from './toast'
+import plugin from './plugin'
+
 Vue.component('lm-button', Button)
 Vue.component('lm-icon', Icon)
 Vue.component('lm-button-group', ButtonGroup)
@@ -21,6 +24,10 @@ Vue.component('lm-header', Header)
 Vue.component('lm-content', Content)
 Vue.component('lm-footer', Footer)
 Vue.component('lm-sider', Sider)
+Vue.component('lm-toast', Toast)
+Vue.use(plugin)
+
+
 new Vue({
     el: '#app',
     data: {
@@ -28,9 +35,9 @@ new Vue({
         message: 'hello',
     },
     methods: {
-        inputChange(e) {
-            console.log(e.target.value);
+        showToast() {
+            this.$toast('hello')
         }
-    }
+    },
 })
 

@@ -11,57 +11,15 @@
             padding: 0;
             box-sizing: border-box;
         }
-
-        html {
-            --button-height: 32px;
-            --font-size: 14px;
-            --button-bg: white;
-            --button-active-bg: #eee;
-            --border-radius: 4px;
-            --color: #333;
-            --border-color: #999;
-            --border-color-hover: #666;
-        }
     </style>
-    <style>
-        .demo {
-            border: 1px solid gray;
-            min-height: 100px;
-        }
 
-        .header {
-            background: #aaa;
-        }
-
-        .content {
-            background: #ddd;
-        }
-
-        .footer {
-            background: #bbb;
-        }
-
-        .slider {
-            background: #eee;
-            width: 200px;
-        }
-    </style>
 </head>
 
 <body>
     <div id="app">
-        <lm-layout style="height: 100vh;">
-            <lm-sider class="demo slider">Sider</lm-sider>
-            <lm-layout>
-                <lm-header class="demo header">Header</lm-header>
-                <lm-content class="demo content">Content</lm-content>
-                <lm-footer class="demo footer">Footer</lm-footer>
-            </lm-layout>
-        </lm-layout>
+        <button @click="showToast">Click Me !</button>
     </div>
-
     <script src="src/app.js"></script>
-
 </body>
 
 </html>
