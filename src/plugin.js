@@ -15,7 +15,7 @@ export default {
     }
 }
 
-function createToast({ Vue, message, propsData }) {
+function createToast({ Vue, message, propsData, onClose }) {
     let Constructor = Vue.extend(Toast)
     let toast = new Constructor({ propsData })
     toast.$slots.default = [message]
