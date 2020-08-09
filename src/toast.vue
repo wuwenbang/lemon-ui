@@ -1,7 +1,10 @@
 <template>
-  <div class="toast">
-    <slot></slot>
-    <div class="line"></div>
+  <div class="toast" ref="wrapper">
+    <div class="message">
+      <slot v-if="!enableHtml"></slot>
+      <div v-else v-html="$slots.default[0]"></div>
+    </div>
+    <div class="line" ref="line"></div>
     <span class="close" v-if="closeButton" @click="onClickClose">
       {{closeButton.text}}
     </span>
@@ -30,28 +33,42 @@ export default {
       default() {
         return {
           text: "关闭",
-          callback: (toast) => {
-            toast.close();
-          },
+          callback: undefined,
         };
       },
     },
+    enableHtml: {
+      type: Boolean,
+      default: false,
+    },
   },
   mounted() {
-    setTimeout(() => {
-      if (this.autoClose) {
-        this.close();
-      }
-    }, this.autoCloseDelay * 1000);
+    this.delayClose();
+    this.updateStyle();
   },
   methods: {
+    updateStyle() {
+      this.$nextTick(() => {
+        this.$refs.line.style.height =
+          this.$refs.wrapper.getBoundingClientRect().height + "px";
+      });
+    },
+    delayClose() {
+      setTimeout(() => {
+        if (this.autoClose) {
+          this.close();
+        }
+      }, this.autoCloseDelay * 1000);
+    },
     close() {
       this.$el.remove();
       this.$destroy();
     },
     onClickClose() {
       this.close();
-      this.closeButton.callback();
+      if (this.closeButton && typeof this.closeButton.callback === "function") {
+        this.closeButton.callback();
+      }
     },
   },
 };
@@ -60,7 +77,7 @@ export default {
 <style lang="scss" scoped>
 .toast {
   font-size: 14px;
-  height: 40px;
+  min-height: 40px;
   line-height: 1.8;
   position: fixed;
   top: 0;
@@ -73,14 +90,22 @@ export default {
   background: rgba(0, 0, 0, 0.7);
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
   padding: 0 16px;
+  .message {
+    padding: 8px 0;
+    max-width: 400px;
+    word-wrap: break-word;
+  }
   .line {
     margin-left: 16px;
-    padding-right: 16px;
     height: 100%;
     border-left: 1px solid #666;
   }
-  .close:hover {
-    cursor: pointer;
+  .close {
+    flex-shrink: 0;
+    padding-left: 16px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 </style>

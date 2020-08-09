@@ -36,7 +36,15 @@ new Vue({
     },
     methods: {
         showToast() {
-            this.$toast('hello')
+            this.$toast('helloooooooooooooooooooooooooooo', {
+                enableHtml: true,
+                closeButton: {
+                    text: "知道了",
+                    callback: () => {
+                        console.log('用户说他知道了')
+                    }
+                }
+            })
         }
     },
 })
