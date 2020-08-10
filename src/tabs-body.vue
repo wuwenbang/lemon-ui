@@ -8,7 +8,6 @@
 export default {
   name: "Lemon-tabs-body",
   inject: ["eventBus"],
-  created() {},
 };
 </script>
 
