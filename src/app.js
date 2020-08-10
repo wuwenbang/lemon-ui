@@ -12,6 +12,12 @@ import Footer from './footer'
 import Sider from './sider'
 import Toast from './toast'
 import plugin from './plugin'
+import Tabs from './tabs'
+import TabsHead from './tabs-head'
+import TabsBody from './tabs-body'
+import TabsItem from './tabs-item'
+import TabsPane from './tabs-pane'
+
 
 Vue.component('lm-button', Button)
 Vue.component('lm-icon', Icon)
@@ -24,7 +30,12 @@ Vue.component('lm-header', Header)
 Vue.component('lm-content', Content)
 Vue.component('lm-footer', Footer)
 Vue.component('lm-sider', Sider)
-Vue.component('lm-toast', Toast)
+Vue.component('lm-tabs', Tabs)
+Vue.component('lm-tabs-head', TabsHead)
+Vue.component('lm-tabs-body', TabsBody)
+Vue.component('lm-tabs-item', TabsItem)
+Vue.component('lm-tabs-pane', TabsPane)
+
 Vue.use(plugin)
 
 
@@ -33,6 +44,7 @@ new Vue({
     data: {
         load: false,
         message: 'hello',
+        selectedTab: 'tab1'
     },
     methods: {
         showToast(position) {
