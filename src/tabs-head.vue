@@ -27,6 +27,7 @@ export default {
 $tab-height: 40px;
 $blue: #0af;
 .tabs-head {
+  border-bottom: 1px solid #ddd;
   display: flex;
   height: $tab-height;
   justify-content: flex-start;
@@ -39,6 +40,10 @@ $blue: #0af;
   }
   > .action-wrapper {
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1em;
   }
 }
 </style>
