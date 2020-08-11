@@ -31,8 +31,19 @@ export default {
       eventBus: this.eventBus,
     };
   },
-  created() {
-    // this.$emit("update:selected", "selectedTab");
+  mounted() {
+    this.$children.forEach((head) => {
+      if (head.$options.name === "LemonTabsHead") {
+        head.$children.forEach((item) => {
+          if (
+            item.$options.name === "LemonTabsItem" &&
+            item.name === this.selected
+          ) {
+            this.eventBus.$emit("update:selected", this.selected, item);
+          }
+        });
+      }
+    });
   },
 };
 </script>
