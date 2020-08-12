@@ -10,14 +10,13 @@ import Header from './header'
 import Content from './content'
 import Footer from './footer'
 import Sider from './sider'
-import Toast from './toast'
 import plugin from './plugin'
 import Tabs from './tabs'
 import TabsHead from './tabs-head'
 import TabsBody from './tabs-body'
 import TabsItem from './tabs-item'
 import TabsPane from './tabs-pane'
-
+import Popover from './popover'
 
 Vue.component('lm-button', Button)
 Vue.component('lm-icon', Icon)
@@ -35,6 +34,7 @@ Vue.component('lm-tabs-head', TabsHead)
 Vue.component('lm-tabs-body', TabsBody)
 Vue.component('lm-tabs-item', TabsItem)
 Vue.component('lm-tabs-pane', TabsPane)
+Vue.component('lm-popover', Popover)
 
 Vue.use(plugin)
 

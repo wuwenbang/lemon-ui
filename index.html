@@ -17,23 +17,12 @@
 
 <body>
     <div id="app">
-        <lm-tabs :selected.sync="selectedTab" direction="horizontal">
-            <lm-tabs-head>
-                <template slot="actions">
-                    <lm-button>actions</lm-button>
-                </template>
-                <lm-tabs-item name="tab1">
-                    <lm-icon name="settings"></lm-icon>tab1
-                </lm-tabs-item>
-                <lm-tabs-item name="tab2" disabled>tab2</lm-tabs-item>
-                <lm-tabs-item name="tab3">tab3</lm-tabs-item>
-            </lm-tabs-head>
-            <lm-tabs-body>
-                <lm-tabs-pane name="tab1">tab1 content</lm-tabs-pane>
-                <lm-tabs-pane name="tab2">tab2 content</lm-tabs-pane>
-                <lm-tabs-pane name="tab3">tab3 content</lm-tabs-pane>
-            </lm-tabs-body>
-        </lm-tabs>
+        <lm-popover style="margin: 100px;">
+            <template slot="content">
+                <div>popover 内容</div>
+            </template>
+            <button>点我</button>
+        </lm-popover>
     </div>
     <script src="src/app.js"></script>
 </body>
