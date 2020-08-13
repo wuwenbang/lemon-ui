@@ -47,17 +47,9 @@ new Vue({
         selectedTab: 'tab1'
     },
     methods: {
-        showToast(position) {
-            this.$toast('你的智商需要充值', {
-                position,
-                closeButton: {
-                    text: "知道了"
-                }
-            })
-        },
-        showToast1() { this.showToast('top') },
-        showToast2() { this.showToast('middle') },
-        showToast3() { this.showToast('bottom') }
+        onClick() {
+            console.log('click')
+        }
     },
 
 })
