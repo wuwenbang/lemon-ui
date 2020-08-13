@@ -1,9 +1,11 @@
 <template>
-  <div class="popover" @click="onClick">
-    <div class="content-wrapper" v-if="visible">
+  <div class="popover" @click.stop="onClick">
+    <div class="content-wrapper" v-if="visible" @click.stop ref="contentWrapper">
       <slot name="content"></slot>
     </div>
-    <slot></slot>
+    <span ref="triggerWrapper">
+      <slot></slot>
+    </span>
   </div>
 </template>
 
@@ -17,7 +19,27 @@ export default {
   },
   methods: {
     onClick() {
+      //vm 切换(隐藏) 弹出框
       this.visible = !this.visible;
+      if (this.visible === true) {
+        this.$nextTick(() => {
+          document.body.appendChild(this.$refs.contentWrapper);
+          let {
+            width,
+            height,
+            top,
+            left,
+          } = this.$refs.triggerWrapper.getBoundingClientRect();
+          this.$refs.contentWrapper.style.left = left + window.scrollX + "px";
+          this.$refs.contentWrapper.style.top = top + window.scrollY + "px";
+          let eventHandler = () => {
+            //document 隐藏 弹出框
+            this.visible = false;
+            document.removeEventListener("click", eventHandler);
+          };
+          document.addEventListener("click", eventHandler);
+        });
+      }
     },
   },
 };
@@ -28,12 +50,11 @@ export default {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  .content-wrapper {
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    border: 1px solid gray;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  }
+}
+.content-wrapper {
+  position: absolute;
+  border: 1px solid gray;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  transform: translateY(-100%);
 }
 </style>
