@@ -5,8 +5,26 @@
 </template>
 
 <script>
+import Vue from "vue";
 export default {
   name: "LemonCollapse",
+  props: {
+    single: {
+      type: Boolean,
+      defalut: false,
+    },
+  },
+  data() {
+    return {
+      eventBus: new Vue(),
+    };
+  },
+  provide() {
+    return {
+      eventBus: this.eventBus,
+      single: this.single,
+    };
+  },
 };
 </script> 
 
