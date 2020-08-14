@@ -33,7 +33,7 @@ describe('Popover', () => {
             done()
         })
     })
-    xit('可以设置 trigger', (done) => {
+    it('可以设置 trigger', (done) => {
         Vue.component('lm-popover', Popover)
         const div = document.createElement('div')
         document.body.appendChild(div)
