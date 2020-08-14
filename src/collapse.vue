@@ -13,6 +13,9 @@ export default {
       type: Boolean,
       defalut: false,
     },
+    selected: {
+      type: String,
+    },
   },
   data() {
     return {
@@ -24,6 +27,9 @@ export default {
       eventBus: this.eventBus,
       single: this.single,
     };
+  },
+  mounted() {
+    this.eventBus.$emit("update:selected", this.selected);
   },
 };
 </script> 
