@@ -48,7 +48,8 @@ new Vue({
     data: {
         load: false,
         message: 'hello',
-        selectedTab: 'tab1'
+        selectedTab: 'tab1',
+        selected: ['1']
     },
     methods: {
         onClick() {

@@ -1,9 +1,10 @@
+  
 <template>
   <div class="collapseItem">
-    <div class="title" @click="toggle">
+    <div class="title" @click="toggle" :data-name="name">
       {{title}}
     </div>
-    <div class="content" v-if="open">
+    <div class="content" ref="content" v-if="open">
       <slot></slot>
     </div>
   </div>
@@ -27,49 +28,45 @@ export default {
       open: false,
     };
   },
-  inject: ["eventBus", "single"],
+  inject: ["eventBus"],
   mounted() {
-    this.single &&
-      this.eventBus.$on("update:selected", (name) => {
-        if (name !== this.name) {
-          this.close();
+    this.eventBus &&
+      this.eventBus.$on("update:selected", (names) => {
+        if (names.indexOf(this.name) >= 0) {
+          this.open = true;
         } else {
-          this.show();
+          this.open = false;
         }
       });
   },
   methods: {
     toggle() {
       if (this.open) {
-        this.open = false;
+        this.eventBus &&
+          this.eventBus.$emit("update:removeSelected", this.name);
       } else {
-        this.single && this.eventBus.$emit("update:selected", this.name);
+        this.eventBus && this.eventBus.$emit("update:addSelected", this.name);
       }
-    },
-    close() {
-      this.open = false;
-    },
-    show() {
-      this.open = true;
     },
   },
 };
-</script> 
+</script>
 
-<style lang="scss" scoped>
-$gray: #ccc;
+<style scoped lang="scss">
+$grey: #ddd;
 $border-radius: 4px;
 .collapseItem {
-  .title {
-    border: 1px solid $gray;
+  > .title {
+    cursor: pointer;
+    border: 1px solid $grey;
     margin-top: -1px;
     margin-left: -1px;
     margin-right: -1px;
     min-height: 32px;
     display: flex;
     align-items: center;
-    cursor: pointer;
     padding: 0 8px;
+    background: lighten($grey, 8%);
   }
   &:first-child {
     > .title {
@@ -81,14 +78,10 @@ $border-radius: 4px;
     > .title:last-child {
       border-bottom-left-radius: $border-radius;
       border-bottom-right-radius: $border-radius;
-      margin-bottom: -1px;
     }
   }
-  .content {
-    min-height: 32px;
-    padding: 0 8px;
-    display: flex;
-    align-items: center;
+  > .content {
+    padding: 8px;
   }
 }
 </style>
