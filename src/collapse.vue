@@ -28,7 +28,9 @@ export default {
     };
   },
   mounted() {
+    // default
     this.eventBus.$emit("update:selected", this.selected);
+    // addSelected
     this.eventBus.$on("update:addSelected", (name) => {
       let selectedCopy = JSON.parse(JSON.stringify(this.selected));
       if (this.single) {
@@ -39,6 +41,7 @@ export default {
       this.eventBus.$emit("update:selected", selectedCopy);
       this.$emit("update:selected", selectedCopy);
     });
+    // removeSelected
     this.eventBus.$on("update:removeSelected", (name) => {
       let selectedCopy = JSON.parse(JSON.stringify(this.selected));
       let index = selectedCopy.indexOf(name);
