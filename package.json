@@ -1,6 +1,6 @@
 {
   "name": "lemon-ui-vue",
-  "version": "0.0.4",
+  "version": "0.1.1",
   "description": "这是一个UI框架",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "test-start": "karma start",
     "test": "parcel build test/* --no-cache --no-minify && karma start --single-run",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "build-index": "npx parcel build index.js --no-minify"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
     "mocha": "^8.1.0",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
     "sinon": "^9.0.2",
     "sinon-chai": "^3.5.0",
     "vue-template-compiler": "^2.6.11",
