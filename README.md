@@ -3,7 +3,7 @@
 作者 ： Pray
 
 [![Build Status](https://travis-ci.org/wuwenbang/lemon-ui.svg?branch=master)](https://travis-ci.org/wuwenbang/lemon-ui)
-[![NPM](https://nodei.co/npm/<package>.png)](https://npmjs.org/package/lemon-ui-vue)
+[![NPM](https://nodei.co/npm/lemon-ui-vue.png)](https://npmjs.org/package/lemon-ui-vue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## 介绍
