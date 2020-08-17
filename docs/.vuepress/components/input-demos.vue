@@ -1,33 +1,36 @@
 <template>
-  <div class="wrapper">
-    <div>默认输入框：
-      <lm-input></lm-input>
-    </div>
-    <div>禁用输入框：
-      <lm-input disabled></lm-input>
-    </div>
-    <div>只读输入框：
-      <lm-input readonly>只读信息</lm-input>
-    </div>
-    <div>输入错误信息：
-      <lm-input error="错误信息"></lm-input>
-    </div>
-  </div>
+  <templateDemos title="基本用法" :code="code">
+    <Input value="默认输入框"></Input>
+    <Input value="禁用输入框" disabled></Input>
+    <Input value="只读输入框" readonly></Input>
+    <Input value="错误信息" error="错误信息"></Input>
+  </templateDemos>
 </template> 
 
 <script>
 import Input from "../../../src/input";
+import templateDemos from "./template-demos";
+
 export default {
   components: {
-    "lm-input": Input,
+    Input,
+    templateDemos,
+  },
+  data() {
+    return {
+      code: `
+<Input value="默认输入框"></Input>
+<Input value="禁用输入框" disabled></Input>
+<Input value="只读输入框" readonly></Input>
+<Input value="错误信息" error="错误信息"></Input>
+`,
+    };
   },
 };
 </script>
 
 <style lang="scss" scoped>
 .wrapper {
-  > div {
-    margin: 4px 0;
-  }
+  margin: 0 5px 10px 0;
 }
 </style>

@@ -5,10 +5,12 @@
         <slot v-if="!enableHtml"></slot>
         <div v-else v-html="$slots.default[0]"></div>
       </div>
-      <div class="line" ref="line"></div>
-      <span class="close" v-if="closeButton" @click="onClickClose">
-        {{closeButton.text}}
-      </span>
+      <div class="closeWrapper" v-if="isCloseButton">
+        <div class="line" ref="line"></div>
+        <span class="close" v-if="closeButton" @click="onClickClose">
+          {{closeButton.text}}
+        </span>
+      </div>
     </div>
   </div>
 </template>
@@ -27,6 +29,12 @@ export default {
       default: 5,
       validator(value) {
         return value === false || typeof value === "number";
+      },
+    },
+    isCloseButton: {
+      type: Boolean,
+      default() {
+        return false;
       },
     },
     closeButton: {
@@ -64,8 +72,10 @@ export default {
   methods: {
     updateStyle() {
       this.$nextTick(() => {
-        this.$refs.line.style.height =
-          this.$refs.toast.getBoundingClientRect().height + "px";
+        if (this.$refs.line) {
+          this.$refs.line.style.height =
+            this.$refs.toast.getBoundingClientRect().height + "px";
+        }
       });
     },
     delayClose() {
@@ -120,6 +130,7 @@ export default {
   }
 }
 .wrapper {
+  z-index: 30;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
@@ -161,16 +172,21 @@ export default {
     max-width: 400px;
     word-wrap: break-word;
   }
-  .line {
-    margin-left: 16px;
-    height: 100%;
-    border-left: 1px solid #666;
-  }
-  .close {
-    flex-shrink: 0;
-    padding-left: 16px;
-    &:hover {
-      cursor: pointer;
+  .closeWrapper {
+    display: flex;
+    align-items: center;
+    .line {
+      margin-left: 16px;
+      height: 100%;
+      border-left: 1px solid #666;
+    }
+    .close {
+      flex-shrink: 0;
+      padding-left: 16px;
+      display: inline-block;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }

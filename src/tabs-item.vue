@@ -55,7 +55,7 @@ $blue: #0af;
 .tabs-item {
   cursor: pointer;
   flex-shrink: 0;
-  padding: 0 1em;
+  padding: 0 1.5em;
   display: flex;
   align-items: center;
   &.active {
@@ -63,7 +63,7 @@ $blue: #0af;
     font-weight: bold;
   }
   &.disabled {
-    color: gray;
+    color: #ccc;
     cursor: not-allowed;
   }
 }

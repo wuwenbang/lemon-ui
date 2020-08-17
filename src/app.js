@@ -10,7 +10,7 @@ import Header from './header'
 import Content from './content'
 import Footer from './footer'
 import Sider from './sider'
-import plugin from './plugin'
+import Toast from './toastPlugin'
 import Tabs from './tabs'
 import TabsHead from './tabs-head'
 import TabsBody from './tabs-body'
@@ -40,7 +40,7 @@ Vue.component('lm-popover', Popover)
 Vue.component('lm-collapse', Collapse)
 Vue.component('lm-collapse-item', CollapseItem)
 
-Vue.use(plugin)
+Vue.use(Toast)
 
 
 new Vue({
@@ -53,7 +53,7 @@ new Vue({
     },
     methods: {
         onClick() {
-            console.log('click')
+            this.$toast("hello")
         }
     },
 

@@ -6,7 +6,7 @@ title: 起步
 ```sh
 vue create hello-world
 ```
-> 如果你还没有安装vue-cli，请先安装[vue-cli](https://cli.vuejs.org/zh/guide/installation.html)，在进行下一步。
+> 如果你还没有安装vue-cli，请先安装[vue-cli](https://cli.vuejs.org/zh/guide/installation.html)，再进行下一步。
 ### 安装 Lemon UI
 ```sh
 yarn add lemon-ui-vue

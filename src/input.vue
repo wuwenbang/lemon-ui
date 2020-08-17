@@ -40,7 +40,7 @@ $border-color: #999;
 $red: #f1453d;
 .wrapper {
   display: inline-flex;
-  font-size: 12px;
+  font-size: 14px;
   align-items: center;
   > :not(:last-child) {
     margin-right: 0.5em;

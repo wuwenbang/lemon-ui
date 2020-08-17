@@ -9,7 +9,7 @@ import Header from './src/header'
 import Content from './src/content'
 import Footer from './src/footer'
 import Sider from './src/sider'
-import plugin from './src/plugin'
+import Toast from './src/toastPlugin'
 import Tabs from './src/tabs'
 import TabsHead from './src/tabs-head'
 import TabsBody from './src/tabs-body'
@@ -21,5 +21,5 @@ import CollapseItem from './src/collapse-item'
 
 export {
     Button, ButtonGroup, Icon, Input, Row, Col, Layout, Header,
-    Content, Footer, Sider, Tabs, TabsHead, TabsBody, TabsItem, TabsPane, Popover, Collapse, CollapseItem, plugin
+    Content, Footer, Sider, Tabs, TabsHead, TabsBody, TabsItem, TabsPane, Popover, Collapse, CollapseItem, Toast
 }
