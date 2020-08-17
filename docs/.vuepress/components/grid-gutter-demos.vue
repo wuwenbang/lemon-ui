@@ -3,27 +3,27 @@
     <div class="row-bg">
       <Row :gutter="10">
         <Col :span="8">
-        <div class="content bg-color"></div>
+        <div class="content bg-color">8</div>
         </Col>
         <Col :span="8">
-        <div class="content bg-color-light"></div>
+        <div class="content bg-color-light">8</div>
         </Col>
         <Col :span="8">
-        <div class="content bg-color"></div>
+        <div class="content bg-color">8</div>
         </Col>
       </Row>
       <Row :gutter="10">
         <Col :span="6">
-        <div class="content bg-color"></div>
+        <div class="content bg-color">6</div>
         </Col>
         <Col :span="6">
-        <div class="content bg-color-light"></div>
+        <div class="content bg-color-light">6</div>
         </Col>
         <Col :span="6">
-        <div class="content bg-color"></div>
+        <div class="content bg-color">6</div>
         </Col>
         <Col :span="6">
-        <div class="content bg-color-light"></div>
+        <div class="content bg-color-light">6</div>
         </Col>
       </Row>
     </div>
@@ -118,6 +118,10 @@ export default {
   border-radius: 4px;
   min-height: 36px;
   width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .row-bg {
   padding: 10px 0;
