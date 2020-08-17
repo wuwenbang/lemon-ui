@@ -1,5 +1,5 @@
 <template>
-  <templateDemos title="组合" :code="code">
+  <templateDemos title="组合用法" :code="code">
     <ButtonGroup>
       <Button icon="left">上一页</Button>
       <Button>全部</Button>

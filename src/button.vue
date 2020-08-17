@@ -35,7 +35,7 @@ export default {
 
 <style lang="scss" scope>
 $button-height: 32px;
-$font-size: 14px;
+$font-size: 13.333px;
 $button-bg: white;
 $button-active-bg: #eee;
 $border-radius: 4px;
@@ -60,7 +60,7 @@ $border-color-hover: #57ca97;
   height: $button-height;
   font-size: $font-size;
   line-height: $font-size;
-  padding: 0 1em;
+  padding: 1px 1em;
   border-radius: $border-radius;
   border: 1px solid $border-color;
   background: $button-bg;

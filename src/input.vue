@@ -80,6 +80,7 @@ $border-color-focus: #888;
   }
   .errorMessage {
     color: $red;
+    line-height: 34px;
   }
 }
 </style>

@@ -2,8 +2,8 @@
   <templateDemos title="基本用法" :code="code">
     <div class="wrapper">
       <Button>默认按钮</Button>
-      <Button :loading="isLoading" @click="isLoading=!isLoading">点击加载</Button>
       <Button disabled>禁用按钮</Button>
+      <Button :loading="isLoading" @click="isLoading=!isLoading">点击加载</Button>
     </div>
     <div class="wrapper">
       <Button icon="shezhi">设置按钮</Button>
@@ -31,8 +31,8 @@ export default {
       code: `
 <div>
   <Button>默认按钮</Button>
-  <Button :loading="isLoading" @click="isLoading=!isLoading">点击加载</Button>
   <Button disabled>禁用按钮</Button>
+  <Button :loading="isLoading" @click="isLoading=!isLoading">点击加载</Button>
 </div>
 <div>
   <Button icon="shezhi">设置按钮</Button>
