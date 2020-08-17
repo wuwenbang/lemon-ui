@@ -38,6 +38,12 @@ export default {
 $height: 32px;
 $border-color: #999;
 $red: #f1453d;
+$border-color-focus: #888;
+@keyframes primary-shadow {
+  to {
+    box-shadow: lighten($border-color-focus, 36%) 0px 0px 0px 2px;
+  }
+}
 .wrapper {
   display: inline-flex;
   font-size: 14px;
@@ -53,11 +59,13 @@ $red: #f1453d;
     padding: 0 8px;
     font-size: inherit;
     &:hover {
-      border-color: #666;
+      border-color: #999;
     }
     &:focus {
       outline: none;
-      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+      animation: primary-shadow 250ms linear;
+      animation-fill-mode: forwards;
+      /* box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5); */
     }
     &[disabled],
     &[readonly] {
