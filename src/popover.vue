@@ -138,7 +138,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$border-color: #333;
+$border-color: #d9d9d9;
 $border-radius: 4px;
 .popover {
   display: inline-block;
@@ -146,6 +146,7 @@ $border-radius: 4px;
   position: relative;
 }
 .content-wrapper {
+  font-size: 14px;
   position: absolute;
   border: 1px solid $border-color;
   border-radius: $border-radius;
@@ -171,7 +172,7 @@ $border-radius: 4px;
       left: 10px;
     }
     &::before {
-      border-top-color: black;
+      border-top-color: $border-color;
       border-bottom: none;
       top: 100%;
     }
@@ -189,7 +190,7 @@ $border-radius: 4px;
     }
     &::before {
       border-top: none;
-      border-bottom-color: black;
+      border-bottom-color: $border-color;
       bottom: 100%;
     }
     &::after {
@@ -207,7 +208,7 @@ $border-radius: 4px;
       top: 50%;
     }
     &::before {
-      border-left-color: black;
+      border-left-color: $border-color;
       border-right: none;
       left: 100%;
     }
@@ -225,7 +226,7 @@ $border-radius: 4px;
       top: 50%;
     }
     &::before {
-      border-right-color: black;
+      border-right-color: $border-color;
       border-left: none;
       right: 100%;
     }
