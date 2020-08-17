@@ -3,6 +3,9 @@ module.exports = {
     title: 'Lemon UI',
     description: 'Just playing around',
     themeConfig: {
+        head: [
+            ['link', { rel: 'shortcut icon', type: "image/x-icon", href: 'assets/favicon.ico' }]
+        ],
         logo: 'assets/lemon.png',
         sidebar: [
             {
@@ -29,6 +32,7 @@ module.exports = {
             { text: '首页', link: '/' },
             { text: '文档', link: '/components/button' },
             { text: 'github', link: 'https://github.com/wuwenbang/lemon-ui' },
+            { text: 'gitee', link: 'https://gitee.com/wuwenbang/lemon-ui' },
         ]
     },
 
