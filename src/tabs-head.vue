@@ -25,7 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 $tab-height: 40px;
-$blue: #0af;
+
 .tabs-head {
   border-bottom: 1px solid #ddd;
   display: flex;
@@ -35,7 +35,7 @@ $blue: #0af;
   > .line {
     position: absolute;
     bottom: 0;
-    border-bottom: 2px solid $blue;
+    border-bottom: 2px solid #3eaf7c;
     transition: all 0.15s;
   }
   > .action-wrapper {
