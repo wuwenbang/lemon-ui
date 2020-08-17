@@ -72,9 +72,9 @@
         display: flex;
         justify-content: center;
         &:hover {
-            background-color: #f9fafc;
+            background-color: #f9fcf9;
             .lock-code-word {
-                color: #409eff;
+                color: hsl(150, 50%, 50%);
             }
         }
         text-align: center;
