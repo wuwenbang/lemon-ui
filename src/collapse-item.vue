@@ -2,7 +2,8 @@
 <template>
   <div class="collapseItem">
     <div class="title" @click="toggle" :data-name="name">
-      {{title}}
+      <span>{{title}}</span>
+      <Icon :name="direction"></Icon>
     </div>
     <div class="content" ref="content" v-if="open">
       <slot></slot>
@@ -11,7 +12,11 @@
 </template>
 
 <script>
+import Icon from "./icon";
 export default {
+  components: {
+    Icon,
+  },
   name: "LemonCollapseItem",
   props: {
     title: {
@@ -21,6 +26,11 @@ export default {
     name: {
       type: String,
       required: true,
+    },
+  },
+  computed: {
+    direction() {
+      return this.open ? "down" : "right";
     },
   },
   data() {
@@ -53,35 +63,27 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$grey: #ddd;
+$grey: #d9d9d9;
 $border-radius: 4px;
 .collapseItem {
-  > .title {
-    cursor: pointer;
-    border: 1px solid $grey;
-    margin-top: -1px;
-    margin-left: -1px;
-    margin-right: -1px;
-    min-height: 32px;
+  transition: all 1s;
+  border-bottom: 1px solid $grey;
+  padding: 8px 16px;
+  .title {
+    margin-top: 8px;
+    padding-bottom: 8px;
+    /* margin-bottom: 8px; */
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 8px;
-    background: lighten($grey, 8%);
+    font-weight: bold;
+    cursor: pointer;
   }
-  &:first-child {
-    > .title {
-      border-top-left-radius: $border-radius;
-      border-top-right-radius: $border-radius;
-    }
+  .content {
+    padding: 1em 0;
   }
   &:last-child {
-    > .title:last-child {
-      border-bottom-left-radius: $border-radius;
-      border-bottom-right-radius: $border-radius;
-    }
-  }
-  > .content {
-    padding: 8px;
+    border-bottom: none;
   }
 }
 </style>
