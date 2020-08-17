@@ -22,21 +22,21 @@ export default {
   mounted() {},
   methods: {
     showToast1() {
-      this.$toast(`顶部信息`);
+      this.$toast("顶部信息");
     },
     showToast2() {
-      this.$toast(`中部信息`, { position: "middle" });
+      this.$toast("中部信息", { position: "middle" });
     },
     showToast3() {
-      this.$toast(`底部信息`, { position: "bottom" });
+      this.$toast("底部信息", { position: "bottom" });
     },
   },
   data() {
     return {
       code: `
 this.$toast('默认信息',)
-this.$toast('顶部信息', {position: 'top', zIndex: 30})
-this.$toast('底部信息', {position: 'bottom'})
+this.$toast('中部信息', { position: "middle" });
+this.$toast('底部信息', { position: "bottom" });
  `,
     };
   },

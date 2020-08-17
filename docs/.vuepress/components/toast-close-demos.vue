@@ -21,21 +21,21 @@ export default {
   mounted() {},
   methods: {
     showToast1() {
-      this.$toast(`顶部信息`, { isCloseButton: true });
+      this.$toast("顶部信息", { isCloseButton: true });
     },
     showToast2() {
-      this.$toast(`中部信息`, { position: "middle", isCloseButton: true });
+      this.$toast("中部信息", { position: "middle", isCloseButton: true });
     },
     showToast3() {
-      this.$toast(`底部信息`, { position: "bottom", isCloseButton: true });
+      this.$toast("底部信息", { position: "bottom", isCloseButton: true });
     },
   },
   data() {
     return {
       code: `
-this.$toast('默认信息',)
-this.$toast('顶部信息', {position: 'top', zIndex: 30})
-this.$toast('底部信息', {position: 'bottom'})
+this.$toast('顶部信息', { isCloseButton: true });
+this.$toast('中部信息', { position: "middle", isCloseButton: true });
+this.$toast('底部信息', { position: "bottom", isCloseButton: true });
  `,
     };
   },

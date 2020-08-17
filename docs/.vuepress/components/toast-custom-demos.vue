@@ -21,13 +21,13 @@ export default {
   mounted() {},
   methods: {
     showToast1() {
-      this.$toast(`自定义关闭文字`, {
+      this.$toast("自定义关闭文字", {
         isCloseButton: true,
         closeButton: { text: "点击我关闭Toast" },
       });
     },
     showToast2() {
-      this.$toast(`关闭后执行回调函数`, {
+      this.$toast("关闭后执行回调函数", {
         isCloseButton: true,
         closeButton: {
           text: "关闭后执行 alert('已经关闭了')",
@@ -38,7 +38,7 @@ export default {
       });
     },
     showToast3() {
-      this.$toast(`2s后自动关闭`, {
+      this.$toast("2s后自动关闭", {
         isCloseButton: true,
         autoClose: 2,
       });
@@ -47,9 +47,23 @@ export default {
   data() {
     return {
       code: `
-this.$toast('默认信息',)
-this.$toast('顶部信息', {position: 'top', zIndex: 30})
-this.$toast('底部信息', {position: 'bottom'})
+this.$toast('自定义关闭文字', {
+  isCloseButton: true,
+  closeButton: { text: "点击我关闭Toast" },
+});
+this.$toast('关闭后执行回调函数', {
+  isCloseButton: true,
+  closeButton: {
+    text: "关闭后执行 alert('已经关闭了')",
+    callback: () => {
+      window.alert("已经关闭了");
+    },
+  },
+});
+this.$toast("2s后自动关闭", {
+  isCloseButton: true,
+  autoClose: 2,
+});
  `,
     };
   },
