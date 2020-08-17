@@ -21,7 +21,7 @@ Vue.use(Toast)
 this.$toast('message',options)
 ```
 
-# options
+### Options 选项
 |     属性      |       说明       |      类型       |       可选值        |              默认值              |
 | :-----------: | :--------------: | :-------------: | :-----------------: | :------------------------------: |
 |   position    |       位置       |     string      | top、middle、bottom |               top                |
@@ -29,5 +29,3 @@ this.$toast('message',options)
 | isCloseButton | 是否启用关闭按钮 |     Boolean     |     true、false     |              false               |
 |  closeButton  |     关闭按钮     |     Object      |   {text,callback}   | {text:"关闭",callback:undefined} |
 |  enableHtml   |   支持html内容   |     boolean     |     true、false     |              false               |
-
-# closeButton options
