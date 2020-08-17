@@ -6,7 +6,6 @@
 ## 关于项目
 Lemon UI 是一个基于Vue2.0 + Sass 的 简易UI组件库，涵盖了Button、Icon、Toast、Tabs、Collapse、Popover等组件。
 开发这套组件的目的主要是为了学习与提高，同时可以将自己的成功分享出来帮助到开源社区的开发者。<br>
-[[点击起步]](../startup/README.md)
 
 ## 开发者
 * 吴文邦（Pray）
@@ -53,13 +52,16 @@ export default {
 ```
 
 ## 文档
-[LemonUI文档](http://wuwenbang.gitee.io/lemon-ui/)
+[文档链接](http://wuwenbang.gitee.io/lemon-ui/)
 ## 提问
 
 ## 变更记录
 
 ## 联系方式
+
 邮箱：wuwenbang@foxmail.com
+
 ## 贡献代码
+Pray
 
 
