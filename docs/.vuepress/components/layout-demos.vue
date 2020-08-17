@@ -175,20 +175,20 @@ body > .container {
 <style lang="scss" scoped>
 .header,
 .footer {
-  background-color: #b3c0d1;
+  background-color: hsl(150, 50%, 50%);
   color: #333;
   text-align: center;
   line-height: 60px;
 }
 .sider {
-  background-color: #d3dce6;
+  background-color: hsl(150, 50%, 65%);
   color: #333;
   text-align: center;
   line-height: 200px;
   /* width: 100px; */
 }
 .content {
-  background-color: #e9eef3;
+  background-color: hsl(150, 50%, 80%);
   color: #333;
   text-align: center;
   line-height: 160px;

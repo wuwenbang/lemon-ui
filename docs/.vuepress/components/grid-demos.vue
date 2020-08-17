@@ -156,7 +156,7 @@ export default {
   background: hsl(150, 50%, 60%);
 }
 .bg-color-light {
-  background: hsl(150, 50%, 80%);
+  background: hsl(150, 50%, 75%);
 }
 .content {
   border-radius: 4px;
@@ -191,7 +191,7 @@ export default {
   background: hsl(150, 50%, 60%);
 }
 .bg-color-light {
-  background: hsl(150, 50%, 80%);
+  background: hsl(150, 50%, 75%);
 }
 .content {
   border-radius: 4px;
