@@ -40,8 +40,13 @@ $button-bg: white;
 $button-active-bg: #eee;
 $border-radius: 4px;
 $color: #333;
-$border-color: #999;
-$border-color-hover: #666;
+$border-color: #d9d9d9;
+$border-color-hover: #57ca97;
+@keyframes primary-shadow {
+  to {
+    box-shadow: lighten($border-color-hover, 36%) 0px 0px 0px 2px;
+  }
+}
 
 @keyframes spin {
   0% {
@@ -65,6 +70,7 @@ $border-color-hover: #666;
   vertical-align: middle;
   &:hover {
     border-color: $border-color-hover;
+    cursor: pointer;
   }
 
   &:active {
@@ -73,6 +79,8 @@ $border-color-hover: #666;
 
   &:focus {
     outline: none;
+    animation: primary-shadow 250ms linear;
+    animation-fill-mode: forwards;
   }
   .content {
     order: 2;

@@ -1,9 +1,17 @@
 <template>
   <templateDemos title="基本用法" :code="code">
-    <Button>默认按钮</Button>
-    <Button icon="settings">设置按钮</Button>
-    <Button :loading="isLoading" @click="isLoading=!isLoading">点击加载</Button>
-    <Button disabled>禁用按钮</Button>
+    <div class="wrapper">
+      <Button>默认按钮</Button>
+      <Button :loading="isLoading" @click="isLoading=!isLoading">点击加载</Button>
+      <Button disabled>禁用按钮</Button>
+    </div>
+    <div class="wrapper">
+      <Button icon="shezhi">设置按钮</Button>
+      <Button icon="dianzan">点赞按钮</Button>
+      <Button icon="shoucang">收藏按钮</Button>
+      <Button icon="shanchu">删除按钮</Button>
+    </div>
+
   </templateDemos>
 
 </template>
@@ -21,10 +29,17 @@ export default {
     return {
       isLoading: false,
       code: `
-<Button>默认按钮</Button>
-<Button icon="settings">只读按钮</Button>
-<Button :loading="isLoading" @click="isLoading=!isLoading">点击加载</Button>
-<Button disabled>禁用按钮</Button>
+<div>
+  <Button>默认按钮</Button>
+  <Button :loading="isLoading" @click="isLoading=!isLoading">点击加载</Button>
+  <Button disabled>禁用按钮</Button>
+</div>
+<div>
+  <Button icon="shezhi">设置按钮</Button>
+  <Button icon="dianzan">点赞按钮</Button>
+  <Button icon="shoucang">收藏按钮</Button>
+  <Button icon="shanchu">删除按钮</Button>
+</div>
 `,
     };
   },
@@ -32,4 +47,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.wrapper {
+  margin-top: 10px;
+}
 </style>
