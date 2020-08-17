@@ -1,14 +1,21 @@
 # Lemon UI —— 一个 Vue UI 组件
-
-作者 ： Pray
-
 [![Build Status](https://travis-ci.org/wuwenbang/lemon-ui.svg?branch=master)](https://travis-ci.org/wuwenbang/lemon-ui)
-[![NPM](https://nodei.co/npm/lemon-ui-vue.png)](https://npmjs.org/package/lemon-ui-vue)
+[![NPM](https://img.shields.io/npm/v/lemon-ui-vue)](https://npmjs.org/package/lemon-ui-vue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 介绍
+## 关于项目
+Lemon UI 是一个基于Vue2.0 + Sass 的 简易UI组件库，涵盖了Button、Icon、Toast、Tabs、Collapse、Popover等组件。
+开发这套组件的目的主要是为了学习与提高，同时可以将自己的成功分享出来帮助到开源社区的开发者。<br>
+[[点击起步]](../startup/README.md)
 
-这是一个基于 Vue 的UI框架，希望对你有帮助。
+## 开发者
+* 吴文邦（Pray）
+* [github](https://github.com/wuwenbang)
+* [gitee](https://gitee.com/wuwenbang)
+
+## 注意事项
+Lemon-UI 是个人学习过程中造出来的UI库，如果你在使用过程中发现问题，非常感谢你提出宝贵意见。<br>
+**PS：目前项目属于开发中，暂不建议在生产项目中使用。**
 
 ## 安装
 ### 搭建Vue的开发环境
@@ -45,15 +52,14 @@ export default {
 <Button>第一个的按钮</Button>
 ```
 
-   
 ## 文档
-
+[LemonUI文档](http://wuwenbang.gitee.io/lemon-ui/)
 ## 提问
 
 ## 变更记录
 
 ## 联系方式
-
+邮箱：wuwenbang@foxmail.com
 ## 贡献代码
 
 
