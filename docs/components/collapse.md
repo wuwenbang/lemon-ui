@@ -8,13 +8,13 @@ title: Collapse - 折叠栏
  <collapse-single-demos></collapse-single-demos>
 </ClientOnly>
 
-# Collapse Attributes
+# Collapse 属性
 |   属性   |     说明     |  类型   |   可选值    | 默认值 |
 | :------: | :----------: | :-----: | :---------: | :----: |
 | selected |  默认选中项  |  Array  | 任意字符串  |   []   |
 |  single  | 是否单一展示 | boolean | true、false | false  |
 
-# CollapseItem Attributes
+# CollapseItem 属性
 | 属性  |       说明       |  类型  |   可选值   | 默认值 |
 | :---: | :--------------: | :----: | :--------: | :----: |
 | title |       标题       | string | 任意字符串 |
