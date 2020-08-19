@@ -3,14 +3,17 @@ title: Input - 输入框
 ---
 # Input - 输入框
 
-
+## 基本用法
 <ClientOnly>
 <input-demos></input-demos>
-<input-bind-demos></input-bind-demos>
-
 </ClientOnly>
 
-### Input 属性
+## 双向绑定
+<ClientOnly>
+<input-bind-demos></input-bind-demos>
+</ClientOnly>
+
+## Input 属性
 
 |   属性   |   说明   |  类型   |   可选值    | 默认值 |
 | :------: | :------: | :-----: | :---------: | :----: |

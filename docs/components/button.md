@@ -3,12 +3,17 @@ title: Button - 按钮
 ---
 # Button - 按钮
 
+## 基本用法
 <ClientOnly>
 <button-demos></button-demos>
+</ClientOnly>
+
+## 组合用法
+<ClientOnly>
 <button-group-demos></button-group-demos>
 </ClientOnly>
 
-### Button 属性
+## Button 属性
 
 |     属性     |   说明   |  类型   |                可选值                 | 默认值 |
 | :----------: | :------: | :-----: | :-----------------------------------: | :----: |

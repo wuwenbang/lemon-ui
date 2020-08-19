@@ -1,6 +1,6 @@
 <template>
   <div class="templateDemo">
-    <h3>{{title}}</h3>
+    <!-- <h2>{{title}}</h2> -->
     <p v-if="desc">{{desc}}</p>
     <div class="component-wrapper">
       <div class="component-wrapper-demo" ref="componentWrapper">

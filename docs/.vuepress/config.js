@@ -3,10 +3,7 @@ module.exports = {
     title: 'Lemon UI',
     description: 'Just playing around',
     themeConfig: {
-        head: [
-            ['link', { rel: 'shortcut icon', type: "image/x-icon", href: 'assets/favicon.ico' }]
-        ],
-        logo: 'assets/lemon.png',
+        logo: 'assets/lemon140.png',
         sidebar: [
             {
                 title: '开始',

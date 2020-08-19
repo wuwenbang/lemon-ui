@@ -1,5 +1,5 @@
 <template>
-  <templateDemos title="单个展开" :code="code">
+  <templateDemos title="单项展开" :code="code">
     <Collapse :selected.sync="collapseSelected" single>
       <CollapseItem title="点击展开1" name="item1">
         柠檬（学名：Citrus limon），为双子叶植物纲芸香科柑橘属植物，柠檬又称柠果、洋柠檬、益母果等。 小乔木，枝少刺或近于无刺，嫩叶及花芽暗紫红色，叶片厚纸质，卵形或椭圆形。单花腋生或少花簇生。果椭圆形或卵形，果皮厚，通常粗糙，柠檬黄色，果汁酸至甚酸，种子小，卵形，端尖；种皮平滑，子叶乳白色，通常单或兼有多胚。花期4-5月，果期9-11月。

@@ -5,7 +5,7 @@ title: 介绍
 [![NPM](https://img.shields.io/npm/v/lemon-ui-vue)](https://npmjs.org/package/lemon-ui-vue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-### 关于项目
+### 项目简介
 :lemon: Lemon UI是一个基于Vue2.0 + Sass 的 简易UI组件库，涵盖了Button、Icon、Toast、Tabs、Collapse、Popover等组件。
 开发这套组件的目的主要是为了学习与提高，同时可以将自己的成功分享出来帮助到开源社区的开发者。<br>
 [[点击起步]](../startup/README.md)

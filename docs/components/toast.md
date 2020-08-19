@@ -3,13 +3,22 @@ title: Toast - 弹窗
 ---
 # Toast - 弹窗
 
+## 自动关闭
 <ClientOnly>
 <toast-demos></toast-demos>
+</ClientOnly>
+
+## 手动关闭
+<ClientOnly>
 <toast-close-demos></toast-close-demos>
+</ClientOnly>
+
+## 自定义关闭
+<ClientOnly>
 <toast-custom-demos></toast-custom-demos>
 </ClientOnly>
 
-### 使用方法
+## 使用方法
 引入Toast插件
 ```js
 import Vue from 'vue'
@@ -21,7 +30,7 @@ Vue.use(Toast)
 this.$toast('message',options)
 ```
 
-### Options 选项
+## Options 选项
 |     属性      |       说明       |      类型       |       可选值        |              默认值              |
 | :-----------: | :--------------: | :-------------: | :-----------------: | :------------------------------: |
 |   position    |       位置       |     string      | top、middle、bottom |               top                |

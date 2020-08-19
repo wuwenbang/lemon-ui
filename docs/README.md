@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /assets/lemon.png
+heroImage: /assets/lemon140.png
 heroText: Lemon UI
 tagline: 一个基于 Vue + Sass 的 UI 组件库
 actionText: 快速上手 →
