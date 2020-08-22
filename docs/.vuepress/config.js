@@ -2,6 +2,9 @@ module.exports = {
     base: "/lemon-ui/",
     title: 'Lemon UI',
     description: 'Just playing around',
+    head: [
+        ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ],
     themeConfig: {
         logo: 'assets/lemon140.png',
         sidebar: [
